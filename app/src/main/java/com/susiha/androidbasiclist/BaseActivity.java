@@ -1,4 +1,4 @@
-package yirendai.com.androidbasiclist;
+package com.susiha.androidbasiclist;
 
 import android.app.Activity;
 

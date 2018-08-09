@@ -1,9 +1,9 @@
-package yirendai.com.androidbasiclist.patternDesign.proxyPattern.staticProxy;
+package com.susiha.androidbasiclist.patternDesign.proxyPattern.staticProxy;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import yirendai.com.androidbasiclist.BaseActivity;
+import com.susiha.androidbasiclist.BaseActivity;
 import yirendai.com.androidbasiclist.R;
 
 /**

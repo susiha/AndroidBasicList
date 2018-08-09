@@ -1,4 +1,4 @@
-package yirendai.com.androidbasiclist.patternDesign.proxyPattern.dynamicProxy;
+package com.susiha.androidbasiclist.patternDesign.proxyPattern.dynamicProxy;
 
 import android.util.Log;
 
@@ -32,7 +32,7 @@ public class ProxyFactory {
                         Log.i(ProxyFactory.class.getName(),"before be Proxyed");
                         Log.i(ProxyFactory.class.getName(),proxy.getClass().getName());
 
-                        Log.i(ProxyFactory.class.getName(),method.getName());
+                        Log.i(ProxyFactory.class.getName(),method.toString());
                         Log.i(ProxyFactory.class.getName(),"-----------------");
 
                         if (args!=null&&args.length>0){

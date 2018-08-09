@@ -1,4 +1,4 @@
-package yirendai.com.androidbasiclist.patternDesign.proxyPattern.staticProxy;
+package com.susiha.androidbasiclist.patternDesign.proxyPattern.staticProxy;
 
 import android.util.Log;
 
