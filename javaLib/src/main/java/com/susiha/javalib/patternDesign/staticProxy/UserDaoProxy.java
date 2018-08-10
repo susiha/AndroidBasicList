@@ -1,6 +1,5 @@
-package com.susiha.androidbasiclist.patternDesign.proxyPattern.staticProxy;
+package com.susiha.javalib.patternDesign.staticProxy;
 
-import android.util.Log;
 
 /**
  * author:  sunshihai
@@ -19,9 +18,9 @@ public class UserDaoProxy implements IUserDao{
     @Override
     public void print() {
 
-        Log.i(UserDaoProxy.class.getName(),"before UserDao's print invoked");
+        System.out.print("before UserDao's print invoked by" + UserDaoProxy.class.getSimpleName());
         mUserDao.print();
-        Log.i(UserDaoProxy.class.getName(),"after UserDao's print invoked");
+        System.out.print("after UserDao's print invoked by" + UserDaoProxy.class.getSimpleName());
 
     }
 }

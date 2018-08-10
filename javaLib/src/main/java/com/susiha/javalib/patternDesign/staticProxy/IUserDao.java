@@ -1,4 +1,4 @@
-package com.susiha.androidbasiclist.patternDesign.proxyPattern.staticProxy;
+package com.susiha.javalib.patternDesign.staticProxy;
 
 /**
  * author:  sunshihai

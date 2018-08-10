@@ -1,6 +1,5 @@
-package com.susiha.androidbasiclist.patternDesign.proxyPattern.staticProxy;
+package com.susiha.javalib.patternDesign.staticProxy;
 
-import android.util.Log;
 
 /**
  * author:  sunshihai
@@ -18,9 +17,9 @@ public class InheritProxy extends InheritBase {
     @Override
     public void print() {
 
-        Log.i(InheritProxy.class.getName(),"before InheritSubject's print invoked");
+        System.out.print("before InheritSubject's print invoked");
         inheritSubject.print();
-        Log.i(InheritProxy.class.getName(),"after InheritSubject's print invoked");
+        System.out.print("after InheritSubject's print invoked");
 
     }
 }

@@ -1,4 +1,4 @@
-package com.susiha.androidbasiclist.patternDesign.proxyPattern.dynamicProxy;
+package com.susiha.javalib.patternDesign.dynamicProxy;
 
 /**
  * author:  sunshihai

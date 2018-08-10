@@ -1,6 +1,5 @@
-package com.susiha.androidbasiclist.patternDesign.proxyPattern.dynamicProxy;
+package com.susiha.javalib.patternDesign.dynamicProxy;
 
-import android.util.Log;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -28,24 +27,26 @@ public class ProxyFactory {
                 target.getClass().getInterfaces(), new InvocationHandler() {
                     @Override
                     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-
-                        Log.i(ProxyFactory.class.getName(),"before be Proxyed");
-                        Log.i(ProxyFactory.class.getName(),proxy.getClass().getName());
-
-                        Log.i(ProxyFactory.class.getName(),method.toString());
-                        Log.i(ProxyFactory.class.getName(),"-----------------");
+                        System.out.println("代理开始");
+                        System.out.println("首先看一下proxy是什么");
+                        System.out.println(proxy.getClass().toString());
+                        System.out.println("其次看一下method是什么");
+                        System.out.println(method.toString());
+                        System.out.println("-----------------");
 
                         if (args!=null&&args.length>0){
                             for(Object object:args){
-                                Log.i(ProxyFactory.class.getName(),object.getClass().getName());
+                                System.out.println("表示有参数，看一下参数是什么");
+                                System.out.println(object.toString());
                             }
                         }
 
 
-                        Log.i(ProxyFactory.class.getName(),"-----------------");
-
+                        System.out.println("-----------------");
                         Object value = method.invoke(target,args);
-                        Log.i(ProxyFactory.class.getName(),"after be Proxyed");
+                        System.out.println("最后看一下返回的Value是什么");
+                        System.out.println(value == null? "null":value.toString());
+                        System.out.println("代理结束");
                         return value;
                     }
                 });
