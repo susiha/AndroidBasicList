@@ -1,13 +1,18 @@
 package com.susiha.androidbasiclist.dynamicProxyHook;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.susiha.androidbasiclist.BaseActivity;
+import com.susiha.androidbasiclist.R;
 
-import yirendai.com.androidbasiclist.R;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
 
 /**
  * author:  sunshihai
@@ -17,9 +22,14 @@ import yirendai.com.androidbasiclist.R;
 
 public class DynamicProxyHookMainActivity extends BaseActivity{
 
+    private String TAG = "DynamicProxyHookMainActivity";
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Log.i(TAG,"onCreate was invoked");
 
         setContentView(R.layout.dynamicproxyhookmainlayout);
 
@@ -30,6 +40,17 @@ public class DynamicProxyHookMainActivity extends BaseActivity{
                 Toast.makeText(getApplicationContext(),"this is originlly",Toast.LENGTH_LONG).show();
             }
         });
+
+    }
+
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(newBase);
+        Log.i(TAG,"attachBaseContext  was invoked");
+
+
+
 
     }
 }
